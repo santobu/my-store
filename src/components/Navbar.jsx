@@ -16,12 +16,8 @@ const Navbar = () => {
         <NavLogo to="/">Logo</NavLogo>
         <Bars />
         <NavMenu>
-          <NavLink to="/products" activeStyle={{ color: "black" }}>
-            Product List
-          </NavLink>
-          <NavLink to="/about" activeStyle={{ color: "black" }}>
-            About
-          </NavLink>
+          <NavLink to="/products">Product List</NavLink>
+          <NavLink to="/about">About</NavLink>
           <NavBtn>
             <NavBtnLink to="/sign-up">Sign Up</NavBtnLink>
           </NavBtn>

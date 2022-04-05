@@ -10,6 +10,7 @@ in this proeject we already have product list page with bad layout so we would l
 
 - Checkout main branch
 - run yarn install
+- run yarn run json-server --watch db.json
 - run yarn start
 
 <br />
@@ -23,3 +24,9 @@ in this proeject we already have product list page with bad layout so we would l
 <br />
 
 ## More information
+
+- get specific product by id `http://localhost:3000/products/{id}`
+
+## Example Design
+
+- ![Product list page](./public/assets/product.png)
