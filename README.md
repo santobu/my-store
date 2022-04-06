@@ -30,3 +30,4 @@ in this proeject we already have product list page with bad layout so we would l
 ## Example Design
 
 - ![Product list page](./public/assets/product.png)
+- ![Product detail page](./public/assets/product-detail.png)
