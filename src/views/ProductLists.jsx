@@ -29,36 +29,55 @@ const ProductLists = () => {
       <div
         style={{
           display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-around",
+          flexFlow: "row wrap",
+          boxSizing: "border-box",
+          width: "100%",
         }}
       >
         {products &&
           products.map((item) => {
             return (
-              <article
+              <div
                 style={{
-                  border: "1px solid",
-                  flexBasis: "calc(100% / 5 - 2px)",
+                  flexฺฺBasis: "20%",
+                  flexGrow: 0,
+                  maxWidth: "20%",
                 }}
-                key={item.id}
               >
-                <a
-                  href=""
-                  title="See product details"
-                  onClick={handleLinkClick}
+                <article
+                  style={{
+                    marginBottom: "1.4rem",
+                    marginLeft: 4,
+                    marginRight: 4,
+                    border: "1px solid #e9e4dd",
+                    position: "relative",
+                  }}
+                  key={item.id}
                 >
-                  <img src={item.small_image.url} style={{ width: "100%" }} />
-                  <div>{item.name}</div>
-                  <div>
-                    {`${
-                      item.price &&
-                      item.price.regularPrice &&
-                      item.price.regularPrice.amount.value
-                    }`}
-                  </div>
-                </a>
-              </article>
+                  <a
+                    href=""
+                    title="See product details"
+                    onClick={handleLinkClick}
+                  >
+                    <img
+                      src={item.small_image.url}
+                      style={{
+                        width: "100%",
+                        objectFit: "cover",
+                        height: "100%",
+                      }}
+                    />
+                    <div>{item.name}</div>
+                    <div>
+                      {`${
+                        item.price &&
+                        item.price.regularPrice &&
+                        item.price.regularPrice.amount.value
+                      }`}
+                    </div>
+                  </a>
+                </article>
+              </div>
             );
           })}
       </div>
